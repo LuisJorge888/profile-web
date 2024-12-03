@@ -208,7 +208,7 @@ body {
 .home-sci {
     position: absolute;
     bottom: 40px;
-    width: 170px;
+    width: 200px;
     display: flex;
     justify-content: space-between;
 }
@@ -280,7 +280,8 @@ body {
     --spacing: 1.5rem;
     --radius: 10px;
     margin: 5%;
-    font-size: 32px;
+    font-size: 26px;
+    margin-bottom: 0px;
 }
 
 .tree li {
@@ -305,9 +306,8 @@ body {
     margin: 2%;
 }
 
-.ul-head {
+.ul-head {}
 
-}
 /*
 .tree ul li:last-child {
     border-color: transparent;
@@ -358,9 +358,11 @@ ul>li:last-child {
     animation: showTop 1s ease forwards;
     animation-delay: .6s;
 }
+
 .tree::before::after {
     background: transparent;
 }
+
 #dad-1 {
     border-bottom: 0px;
     padding-top: 4%;
@@ -376,10 +378,22 @@ ul>li:last-child {
     height: 100%;
 }
 
-.about-content {
-    height: 100vh;
+.column-icons {
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.column-icons:hover {
+    background-color: green;
+    color: white;
+}
+
+.about-content {
+    display: flex;
     padding: 0 10%;
     padding-top: 7%;
 }
@@ -412,15 +426,22 @@ ul>li:last-child {
 }
 
 .about-experience-info-tasks {
-    margin-left: 10%;
-    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
 .about-column-ml {
     float: left;
-    width: 33%;
     text-align: center;
+    border: 1px solid white;
+    width: 50%;
+}
 
+.about-column-m2 {
+    border: 1px solid white;
+    text-align: center;
 }
 
 .about-column-bg {
@@ -439,7 +460,6 @@ ul>li:last-child {
     margin: 5%;
     width: 90%;
     border-color: white;
-    padding-bottom: 9px;
     border: 1px dashed;
 }
 
@@ -447,11 +467,12 @@ ul>li:last-child {
     font-size: 35px;
     text-align: center;
     border: 1px solid;
-    margin-bottom: 5%;
 }
 
 .about-tasks {
-    margin: 2%;
+    margin: 4%;
+    border-bottom: 1px solid white;
+    text-align: center;
 }
 
 table {
@@ -480,6 +501,124 @@ th {
 
 .cmd {
     color: green;
+}
+
+.contact-div {
+    margin: 5%;
+}
+
+.row {
+    display: flex;
+    height: 10%;
+    border: 1px solid;
+    align-items: center;
+}
+
+.row:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.title-icon {
+    padding: 5%;
+}
+
+.contact-h1 {
+    font-size: 32px;
+}
+
+.contact-icon {
+    justify-content: space-between;
+    padding-left: 5%;
+}
+
+
+.contact-icon span {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.contact-icon span:hover {
+    color: #081b29;
+}
+
+.contact-icon span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+    transition: .5s;
+}
+
+a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.contact-icon span:hover::before {
+    width: 100%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    border: 1px solid white;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 27px;
+    left: 100%;
+}
+
+#spanCopyIdSuccess {
+    color: green;
+    border-color: green;
+}
+
+.home-pfp {
+    position: absolute;
+    right: 10%;
+    width: 90vh;
+    z-index: -1;
+}
+
+.home-pfp-filters {
+    filter: grayscale(100%);
+    width: 100%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 /* KEYFRAMES ANIMATION */
